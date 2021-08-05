@@ -25,7 +25,7 @@
 
 - INSERT INTO 테이블명 (서브쿼리) : SELECT로 조회한 내용을 그대로 INSERT 할 수 있음.
 
-  ​	ex : INSERT INTO fruit (SELECT * FROM fruit);
+  	ex : INSERT INTO fruit (SELECT * FROM fruit);
 
 ### # DELETE문
 
@@ -59,5 +59,4 @@
   -- 모든 fname이 apple로 수정됨
   UPDATE fruit SET fname = 'apple';
   UPDATE fruit SET fid = 3, fname = 'orange', fprice = 1000;
-  
   ```
