@@ -267,4 +267,152 @@ ex :
 
 - type : disc, circle, square, none
 - &lt;ul&gt;&lt;/ut&gt; :unordered list
-- 
+- &lt;li&gt; : list item
+
+##### # 순서 있는 리스트(ordered list)
+
+- type : 1,a, A, i, I
+- &lt;ol&gt; : order list
+
+##### #설명이 있는 리스트 (description list)
+
+- &lt;dl&gt; : description list
+- &lt;dt&gt; : 설명하고자 하는 것
+- &lt;dd&gt; : dt의 것을 설명해논 것
+
+
+
+### ※ 동영상
+
+##### # 웹 페이지에서 동영상 재생하기
+
+- controls : 동영상 컨트롤 패널을 추가한다.
+
+- autoplay : 자동 재생9음소거 옵션과 함께 사용해야 한다.
+
+- muted : 음소거
+
+- loop : 반복 재생
+
+  ```html
+  <video width="500" src="동영상 주소" controls></video>
+  
+  <video width="500" src="동영상 주소" autoplay muted loop></video>
+  ```
+
+
+
+### ※ 입력
+
+- input 태그를 이용해 사용자로 부터 다양한 입력을 받을 수 있다.
+
+##### # 여러가지 type
+
+- text : 일반적인 텍스트 입력
+
+- password : 비밀번호 입력란
+
+- date : 날짜입력(브라우저마다 생김새 다름)
+
+- checkbox : 여러가지 항목중에서 다수를 선택할 수 있는 버튼
+
+- radio : 여러가지 항목중 하나만 선택할 수 있는 버튼
+
+  ※ 다 같은 name으로 묶여 있어야 함, 카테고리 역할
+
+- number : 숫자 입력란
+
+- email : 이메일 입력란, 약간의 이메일 형식 검사를 한다.
+
+- color : 색상 선택
+
+- textarea : 많은 양의 text를 입력하기 위한 태그
+
+- select : 여러가지 option에서 선택할 수 있음
+
+```html
+<table border="2">
+	<tr>
+    	<th>type</th>
+        <th>모양</th>
+    </tr>
+    <tr>
+    	<td>type="text"</td>
+        <td>
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+    	<td>type="password"</td>
+        <td>
+        	<input type="password">
+        </td>
+    </tr>
+    <tr>
+    	<td>type="date"</td>
+        <td>
+        	<input type="date">
+        </td>
+	</tr>
+	<tr>
+		<td>type="checkbox"</td>
+		<td>
+			<input type="checkbox" name="swim-check" checked>자유형 <br>
+			<input type="checkbox" name="swim-check" checked> 평영 <br>
+			<input type="checkbox" name="swim-check" checked> 배영 <br>
+			<input type="checkbox" name="swim-check" checked> 접영 <br>
+		</td>
+    </tr>
+    <tr>
+		<td>type="radio</td>
+        <td>
+			<input id="free" type="radio" name="swim-radio" checked>
+            <label for="free">자유형</label> <br>
+            <input id="frog" type="radio" name="swim-radio">
+            <label for="frog">평영</label><br>
+            <input id="stomach" type="radio" name="swim-radio">
+            <label for="stomach">배영</label> <br>
+            <input id="butterfly" type="radio" name="swim-radio">
+            <label for="butterfly">접영</label>  <br>
+	</tr>
+    <tr>
+        <td>type="number"</td>
+        <td>
+            <input type="number" step="100" min="0" max="5000">
+        </td>
+    </tr>
+    <tr>
+        <td>type="email</td>
+        <td>
+            <form action="." method="POST">
+                <input type="email" name="to">
+                <input type="submit" value="Send!">
+            </form>   
+        </td>
+    </tr>
+    <tr>
+        <td>type="color"</td>
+        <td>
+            <input type="color">
+        </td>
+    </tr>
+    <tr>
+        <td>&lt;textarea&gt;</td>
+        <td>
+            <textarea cols="30" rows="10"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>type="select"</td>
+        <td>
+            <select>
+                <option value="kr">Republic of Korea(KR)</option>
+                <option value="us">US</option>
+                <option value="en">EN</option>
+                <option selected>--SELECT YOUR COUNTRY --</option>
+            </select>
+		</td>
+	</tr>
+</table>
+```
+
